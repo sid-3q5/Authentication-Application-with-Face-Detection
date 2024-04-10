@@ -1,0 +1,51 @@
+{% autoescape off %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7028828c4e.js" crossorigin="anonymous"></script>
+    <title>Authentication Application ACTIVATION MAIL.</title>
+</head>
+
+<body>
+    </div>
+    <center class="wrapper">
+        <div class="webkit">
+            <div class="heade">
+                <p>Just one more step...</p>
+            </div>
+            <div class="main">
+                <h2>Hi! {{ user.username }}</h2>
+                <p>You just created a new account at Authentication App. All you have to do now is activate it :</p>
+            </div>
+            <div class="click">
+                <a href="{{ domain }}{% url 'activate' uidb64=uid token=token %}">
+                    <button>Activate my account</button>
+                </a>
+            </div>
+            <div class="reg">
+                <p>If this link doesn't work copy this URL into browser : <a href="#">View URL</a></p>
+                <p>Or else reply to this mail.</p>
+            </div>
+        </div>
+        <div class="foot">
+            <p>© 2024 Authentication Application. All rights reserved</p>
+            <div class="img">
+                <a href="{{f.git}}">
+                    <img src="https://i.imgur.com/aFMDlMx.png" />
+                </a>
+                <a href="{{f.link}}">
+                    <img src="https://i.imgur.com/c8xIsze.png" />
+                </a>
+            </div>
+            <p>You received this mail because you signed up for Authentication Application.</p>
+            <p>By SIDDHANT CHAUHAN, RAJKUMAR RATHI, AKSHAT PANDEJI</p>
+        </div>
+    </center>
+</body>
+
+</html>
+{% endautoescape %}

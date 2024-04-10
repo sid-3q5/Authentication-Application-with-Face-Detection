@@ -1,0 +1,42 @@
+{% load static %} {% block content %}
+
+<div class="signupFrm" id="signupFrm">
+  <div>
+    <form method="post" class="form" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h1 class="title">Login</h1>
+      <!-- inputContainer -->
+      <div class="inputContainer">
+        <input
+          type="text"
+          name="username"
+          class="input"
+          placeholder="Username"
+        />
+      </div>
+      <div class="inputContainer">
+        <input type="file" id="image" name="image" accept="image/*" />
+      </div>
+      <div class="inputContainer">
+        <input
+          type="password"
+          name="password"
+          class="input"
+          placeholder="Password"
+          id="myInput"
+        />
+      </div>
+
+      <!-- <input type="checkbox" onclick="myFunction()" />Show Password -->
+      <div>
+        <input type="submit" value="Login" class="submitBtn" />
+      </div>
+      <div></div>
+      {% if error %}
+      <p>error</p>
+      {% endif %}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

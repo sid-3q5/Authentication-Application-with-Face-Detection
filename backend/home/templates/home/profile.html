@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Login</title>
+    <script
+      src="https://kit.fontawesome.com/7028828c4e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static '/css/tech.css' %}" />
+  </head>
+
+  <body>
+    <div>
+      <p>{{user_data.first_name}} {{user_data.last_name}}</p>
+      <p>{{profile.photo}}</p>
+      <!-- <img src="{% static '/images/.png' %}" alt="Avatar" class="avatar"> -->
+    </div>
+    <a href="/logout">LogOut</a>
+  </body>
+</html>
