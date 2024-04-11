@@ -24,13 +24,6 @@ from django.conf import settings
 # Create your views here.
 
 
-def rand1():
-    list2 = {"git": "https://github.com/sid-3q5",
-             "link": "https://www.linkedin.com/in/siddhant-chauhan-4614041b9/"}
-    list3 = [list2]
-    return random.choice(list3)
-
-
 def home(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
@@ -52,7 +45,6 @@ def home(request):
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
-                'f': rand1(),  # Not sure where rand1() comes from, you may need to define it
                 'domain': "{0}".format("http://127.0.0.1:8000"),
             })
             to_email = form.cleaned_data.get('email')
