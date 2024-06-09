@@ -21,6 +21,5 @@ This project addresses user authentication challenges within subscription busine
 
 ## Benefits
 
-- Improved user experience and security in subscription models.
 - Reduced risk of unauthorized access and revenue loss.
 
