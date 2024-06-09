@@ -11,7 +11,7 @@ This project addresses user authentication challenges within subscription busine
 ## Technology Stack
 
 - Backend: Django (MVT web framework)
-- Client-side: JavaScript
+- Frontend: HTML, CSS, JavaScript
 
 ## Key Features
 
